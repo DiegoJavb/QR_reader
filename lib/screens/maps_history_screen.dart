@@ -1,0 +1,11 @@
+import 'package:flutter/material.dart';
+
+class HistoryMapsScreen extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text('history maps page'),
+    );
+  }
+}
