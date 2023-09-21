@@ -36,11 +36,11 @@ class _HomeScreenBody extends StatelessWidget {
     final currentIndex = uiProvider.selectedMenuOpt;
     switch (currentIndex) {
       case 0:
-        return HistoryMapsScreen();
+        return MapsHistoryScreen();
       case 1:
         return DirectionsScreen();
       default:
-        return HistoryMapsScreen();
+        return MapsHistoryScreen();
     }
   }
 }

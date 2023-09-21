@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HistoryMapsScreen extends StatelessWidget {
-
+class MapsHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
