@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:qr_reader/models/scan_model.dart';
+import 'package:qr_reader/providers/db_provider.dart';
 import 'package:qr_reader/providers/ui_provider.dart';
 
 import 'package:qr_reader/screens/screens.dart';
@@ -34,6 +36,12 @@ class _HomeScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final uiProvider = Provider.of<UiProvider>(context);
     final currentIndex = uiProvider.selectedMenuOpt;
+    //TODO Temporal leer base de datos
+    // final tempScan = ScanModel(valor: 'http://google.com');
+    // DBProvider.db.nuevoScan(tempScan);
+    // DBProvider.db.getScabByID(8).then((scan) => print(scan!.valor));
+    // DBProvider.db.getAllScans().then(print);
+    DBProvider.db.deleteAllScans().then(print);
     switch (currentIndex) {
       case 0:
         return MapsHistoryScreen();

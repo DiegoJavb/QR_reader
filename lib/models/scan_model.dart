@@ -10,13 +10,16 @@ class ScanModel {
     this.tipo,
     required this.valor,
   }) {
-    if (tipo!.contains('http')) {
+    if (valor.contains('http')) {
       tipo = 'http';
     } else {
       tipo = 'geo';
     }
   }
-
+  /*
+  fromRawJson y fromJson, son métodos utilizados para convertir datos JSON
+  en objetos de Dart
+  */
   factory ScanModel.fromRawJson(String str) =>
       ScanModel.fromJson(json.decode(str));
 
