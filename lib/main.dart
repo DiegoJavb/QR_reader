@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:qr_reader/providers/ui_provider.dart';
+
 import 'package:qr_reader/screens/screens.dart';
+
+import 'package:qr_reader/providers/scan_list_provider.dart';
+import 'package:qr_reader/providers/ui_provider.dart';
 
 void main() => runApp(const AppState());
 
@@ -11,7 +14,10 @@ class AppState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (context) => UiProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (context) => UiProvider()),
+        ChangeNotifierProvider(create: (context) => ScanLisProvider()),
+      ],
       child: const MyApp(),
     );
   }
