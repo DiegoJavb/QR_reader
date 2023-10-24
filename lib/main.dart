@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {
         'home': (_) => const HomeScreen(),
-        'map': (_) => const MapScreen(),
+        'map': (_) => MapScreen(),
       },
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,

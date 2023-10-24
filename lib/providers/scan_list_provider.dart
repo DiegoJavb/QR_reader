@@ -1,11 +1,10 @@
 import 'package:flutter/foundation.dart';
-import 'package:qr_reader/models/scan_model.dart';
 import 'package:qr_reader/providers/db_provider.dart';
 
 class ScanLisProvider extends ChangeNotifier {
   List<ScanModel> scans = [];
   String tipoSeleccionado = 'http';
-  nuevoScan(String valor) async {
+  Future<ScanModel> nuevoScan(String valor) async {
     /*    
     siempre lo voy a insertar en BDD
     pero 
@@ -18,6 +17,7 @@ class ScanLisProvider extends ChangeNotifier {
       scans.add(nuevoScan);
       notifyListeners();
     }
+    return nuevoScan;
   }
 
   cargarScans() async {
